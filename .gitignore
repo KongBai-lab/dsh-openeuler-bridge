@@ -1,0 +1,6 @@
+token*.txt
+*.token
+*.log
+__pycache__/
+*.pyc
+*.bak

@@ -1,0 +1,14 @@
+{
+  "name": "dsh-openeuler-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DSHM openEuler 桥：把命令投到「融合开发引擎」（openEuler Linux 子系统）执行；插件内嵌网关，不依赖 Python。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    }
+  },
+  "license": "MIT"
+}
