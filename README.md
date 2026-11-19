@@ -161,6 +161,20 @@ token 必须两端一致：插件首次启动时会在 `tokenFile` 指定的路�
 - 中断 / 取消语义：工具取消（AbortSignal）→ 插件给 node 发 `cancel`；client 断开 → 在途请求 reject。
 - 已知限制：CLI 路径断开后 guest 会话不会自动清理；工具路径不经过 client，不受影响。
 
+## 运行环境（DSHM / DSH）
+
+- **DSHM（鸿蒙端侧）**：本插件是 DSHM 插件，安装方式见上一节（`profiles/<profile>/node_modules/` + `$DSH_HOME/cordis.patch.yml` 的 `insert` 段），改完需完全退出并重开 DSHM。
+- **DSH 桌面版**：插件目录与安装器按对应版本文档；`cordis.patch.yml` 的挂载机制相同，但 profile 路径不同。
+- 插件依赖的 openEuler guest 节点（`guest/node_run.py`）与宿主平台无关，两种环境都能用。
+
+## 版权、第三方依赖与商标
+
+- **本项目**：MIT，见 [LICENSE](LICENSE)。示例图、示例数据由本项目程序生成，随 MIT 许可发布。
+- **第三方依赖**：Node.js 内置模块（Node License）；无第三方 npm 依赖。
+- **字体与图片**：本仓库不含字体文件、不含第三方图片素材。
+- **商标与归属**：DSH、DSHM、DeepSeek Harness 是其各自所有者的产品名或商标；本项目是独立的第三方开源工具，与官方无隶属、赞助或背书关系。GitHub 为其所有者商标。
+- **代码来源**：本仓库代码为原创实现；如果后续引入第三方代码，会在此列出其来源与许可。
+
 ## 许可
 
 MIT，见 [LICENSE](LICENSE)。
